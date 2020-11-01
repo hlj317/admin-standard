@@ -1,0 +1,30 @@
+{
+    "apps": [
+        {
+            "name": "admin-node-pc-service-dev",
+            "script": "./index.web.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "out_file": "/tmp/admin-node-pc/admin-node-pc_out.log",
+            "error_file": "/tmp/admin-node-pc/admin-node-pc_err.log",
+            "log_file": "/tmp/admin-node-pc/admin-node-pc_log.log",
+            "env": {
+                "NODE_ENV": "dev"
+            },
+            "watch": true
+        },
+        {
+            "name": "admin-node-pc-service-production",
+            "script": "./index.web.js",
+            "instances": 1,
+            "exec_mode": "fork",
+            "out_file": "/tmp/admin-node-pc/admin-node-pc_out.log",
+            "error_file": "/tmp/admin-node-pc/admin-node-pc_err.log",
+            "log_file": "/tmp/admin-node-pc/admin-node-pc_log.log",
+            "env": {
+                "NODE_ENV": "production"
+            },
+            "watch": true
+        }
+    ]
+}
