@@ -2,9 +2,9 @@
   <div id="page-radio"
        class="page-radio">
     <el-radio v-model="radio"
-              label="1">备选项9</el-radio>
+              label="1">备选项11</el-radio>
     <el-radio v-model="radio"
-              label="2">备选项10</el-radio>
+              label="2">备选项12</el-radio>
   </div>
 </template>
 
