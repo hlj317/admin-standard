@@ -110,7 +110,9 @@ let baseConfigFunc = (entryPrefix, blackListAry) => {
                 // },
                 {
                     test: /\.js$/,
-                    loader: "happypack/loader?id=babel",
+                    loader: "happypack/loader",
+                    exclude: /node_modules/,
+                    query: { id: "babel", compact: false }
                 },
                 {
                     test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
@@ -141,7 +143,7 @@ let baseConfigFunc = (entryPrefix, blackListAry) => {
                         loader: "babel-loader",
                         threadPool: happyThreadPool,
                         query: {
-                            babelrc: false,
+                            babelrc: false,   //不开启babelrc配置文件
                             presets: [
                                 [
                                     "env",
